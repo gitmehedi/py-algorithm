@@ -35,8 +35,6 @@ def mergeSort(alist):
             k+=k
 
 
-      
-
 alist = [54,26,93,17,77,31,44,55,20]
 print "Merging", alist
 mergeSort(alist)
