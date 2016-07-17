@@ -8,7 +8,7 @@ def countSort(arr):
 #     print "First Count Array: ", outputArr
     
     ans = ["" for _ in arr]
-    print "First answer Array: ", ans
+    
     
     for i in arr:
         countArr[ord(i)] +=1
