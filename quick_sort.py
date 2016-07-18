@@ -2,7 +2,7 @@
 
 def partition(arr,left,right):
     i,j=left,right
-    temp
+    tmp
     pivot = arr[(left+right)/2]
     
     while(i<=j):
@@ -26,4 +26,8 @@ def quickSort(arr,left,right):
     if(index<right):
         quickSort(arr,index,right)
         
-
+arr = [12,5,3,4,2,89,1,65,24,15]
+left = 0
+right = len(arr)-1
+quickSort(arr,left,right)
+print "Sorted array is: ", arr
