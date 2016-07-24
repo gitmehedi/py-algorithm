@@ -2,36 +2,29 @@
 
 def countSort(arr):
     outputArr = [0 for i in range(256)]
-#     print "First Output Array: ", outputArr
-    
     countArr = [0 for j in range(256)]
-#     print "First Count Array: ", outputArr
-    
     ans = ["" for _ in arr]
-    
     
     for i in arr:
         countArr[ord(i)] +=1
-    print "Last count Array: ", countArr
-    
+        
     for i in range(256):
         countArr[i] += countArr[i-1]
-    print "Second Last count Array: ", countArr
- 
-    # Build the output character array
+    print countArr
+
     for i in range(len(arr)):
+        print arr[i],"------",ord(arr[i]),"-------",countArr[ord(arr[i])],"-----",outputArr[countArr[ord(arr[i])]-1]
         outputArr[countArr[ord(arr[i])]-1] = arr[i]
         countArr[ord(arr[i])] -= 1
-    print "Second Last count Array: ", outputArr
-    # contains sorted characters
+        
+    print outputArr
+
     for i in range(len(arr)):
         ans[i] = outputArr[i]
-    
-    print "Second Last count Array: ", ans
     
     return ans 
 
 # Driver program to test above function
-arr = "kemonacho tumi ami val newi"
+arr = "ABCDEFGHIJKLMOPQRSTUVWXYZabcdefghtjklmnopqrstuvwxyz0123456789"
 ans = countSort(arr)
 print "Sorted character array is %s"  %("".join(ans))
