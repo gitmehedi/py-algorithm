@@ -35,6 +35,8 @@ class SelectionSort(object):
             self.lists[i] = temp
 
     def show_list(self):
+        print "Insertion Sort Algorithm"
+        print "========================"
         print self.lists
 
 

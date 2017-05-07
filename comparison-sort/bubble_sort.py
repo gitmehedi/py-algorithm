@@ -21,6 +21,8 @@ Worst Case: BigOh(n*n)
 
 """
 
+import random
+
 
 class BubbleSort(object):
 
@@ -37,10 +39,14 @@ class BubbleSort(object):
                     self.lists[j+1] = temp
 
     def show_list(self):
-        print lists
+        print "Bubble Sort Algorithm"
+        print "========================"
+        print self.lists
 
-lists = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+# lists = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+lists = [int(2516*random.random()) for i in xrange(10000)]
 bubble_sort = BubbleSort(lists)
 bubble_sort.sorting()
 bubble_sort.show_list()
+print bubble_sort.len
 
