@@ -12,19 +12,24 @@ For example, if any number of elements are out of place by only
 one position (e.g. 0123546789 and 1032547698), bubble sort's exchange will get them in order on the first pass, 
 the second pass will find all elements in order, so the sort will take only 2n time.
 
-Worst Case: O(n*n)
-Avg. Case: Theta(n*n)
-Best Case: Omega(n*n)
+Time Complexity
+================
+
+Best Case: Theta(n)
+Avg. Case: Omega(n*n)
+Worst Case: BigOh(n*n)
+
 """
 
 
 class BubbleSort(object):
+
     def __init__(self, lists):
         self.lists = lists
+        self.len = len(self.lists)
 
     def sorting(self):
-        lngt = len(self.lists)
-        for i in range(lngt-1, 0, -1):
+        for i in range(self.len-1, 0, -1):
             for j in range(i):
                 if self.lists[j] > self.lists[j+1]:
                     temp = self.lists[j]
