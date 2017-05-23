@@ -13,11 +13,8 @@ def countSort(arr):
     print countArr
 
     for i in range(len(arr)):
-        print arr[i],"------",ord(arr[i]),"-------",countArr[ord(arr[i])],"-----",outputArr[countArr[ord(arr[i])]-1]
         outputArr[countArr[ord(arr[i])]-1] = arr[i]
         countArr[ord(arr[i])] -= 1
-        
-    print outputArr
 
     for i in range(len(arr)):
         ans[i] = outputArr[i]
